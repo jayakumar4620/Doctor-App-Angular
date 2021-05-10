@@ -71,7 +71,6 @@ this.selectdate =moment(e.target.value).format('DD-MM-YYYY');
 this.formatshow_date(e,"selected");
 
 
-// console.log(d)
 this.getappointments();
 
 
@@ -84,13 +83,10 @@ var date;
 	var splitdate = e.split('-')
  date = new Date(splitdate[0], splitdate[1]-1, splitdate[2]);  
 
-// console.log(this.show_date);
 	}else{
 		var splitdate = e.target.value.split('-')
  date = new Date(splitdate[0], splitdate[1]-1, splitdate[2]);  
-// const month = date.toLocaleString('default', { month: 'short' });
-// this.show_date =  splitdate[2] +' '+ month + ' '+splitdate[0]
-// console.log(this.show_date);
+
 	}
 const month = date.toLocaleString('default', { month: 'short' });
 this.show_date =  splitdate[2] +' ' +month + ' '+splitdate[0]

@@ -34,7 +34,6 @@ morslotno_title=false;
 
 
 close(){
-// $('#id01').style.display='none'
 $("#id01").css("display","none")
 }
 open()
@@ -45,7 +44,6 @@ open()
   });
 $("#id01").css("display","block")
 
-	// $('#id01').style.display='block'
 }
 
 
@@ -83,7 +81,6 @@ alert("Please select time duration as 30 mins")
 }
 
 getdate(){
-  // console.log(this.selectedMoment)
   this.getslots()
 }
 
