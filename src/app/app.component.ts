@@ -12,13 +12,11 @@ export class AppComponent {
   }
 onActivate(event) {
 
-         if(this.router.url == '/'){
-
- this.router.navigate(['/home']);
+         
 
 }
     
-}
+
 
 }
 
