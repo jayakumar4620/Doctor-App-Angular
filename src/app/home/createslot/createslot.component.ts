@@ -19,6 +19,7 @@ eveslot:any=[];
 morslot:any=[];
 eveslotno_title=false;
 morslotno_title=false;
+showbtnval = true;
     constructor(private serverService: ServerService, private router:Router,private route: ActivatedRoute){ }
 
   ngOnInit(): void {
@@ -30,8 +31,19 @@ morslotno_title=false;
      });
 
     this.getslots()
+    this.showbtn()
+ 
   }
+showbtn(){
+   var now = new Date();
+  now.setHours(0,0,0,0);
+  if (this.selectedMoment < now) {
+    this.showbtnval = false;
+  } else {
+    this.showbtnval = true;
 
+  }
+}
 
 close(){
 $("#id01").css("display","none")
@@ -81,6 +93,7 @@ alert("Please select time duration as 30 mins")
 }
 
 getdate(){
+  this.showbtn()
   this.getslots()
 }
 

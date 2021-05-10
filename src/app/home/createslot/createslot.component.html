@@ -35,7 +35,7 @@
   
  </div>
 
-<div class="morndiv3"  (click)="open()">
+<div class="morndiv3"  (click)="open()" *ngIf="showbtnval">
 <p class="morndiv3p">
    <img  calss="morndiv3img" style="width: 16%" src="assets/images/plus.png"/>
     Add slot
@@ -78,7 +78,7 @@
 
  </div>
 
-<div class="morndiv3" >
+<div class="morndiv3" *ngIf="showbtnval">
 <p class="morndiv3p" (click)="open()">
    <img  calss="morndiv3img" style="width: 16%" src="assets/images/plus.png"/>
     Add slot

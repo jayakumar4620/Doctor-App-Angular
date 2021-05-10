@@ -34,13 +34,22 @@
   height: 100%;
 
 }
+
+.widget-heading{
+    text-transform: uppercase;
+        font-weight: 500;
+}
+
+.widget-subheading{
+  color: darkgrey;
+}
+
   /*background-image : url('../../assets/images/calendar.png');
 }
 
 
 /* You can add global styles to this file, and also import other style files */
 
-@import url("~@danielmoncada/angular-datetime-picker/assets/style/picker.min.css");
 
 
 html, body { height: 100%; }
@@ -192,13 +201,9 @@ margin-top: 5px;
     padding-right: 40px;
 }
 .drcal{
-/* width: 50px;
-    height: 40px;
-    padding-top: 8%;
-    padding-right: 30px;*/
-    padding-right: 24px;
-    margin-top: 7%;
-    margin-right: 10px;
+padding-right: 24px;
+    margin-top: 10%;
+    margin-right: 20px;
 
 }
 .drname{
@@ -388,7 +393,7 @@ table {
 
 .table td {
   
-    padding: 10px;
+    padding: 14px;
     background: #fff !important;
     /*padding: .55rem;*/
     /*vertical-align: top;*/
