@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("~@danielmoncada/angular-datetime-picker/assets/style/picker.min.css");
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+
+.bg{
+	background: #f0f8ff87;
+  overflow: hidden;
+}
+.success-message {
+    color: #229a5d;
+    padding: 5px 0px;
+}
+.error-message {
+    color: #f00 !important;
+    padding: 5px 0px;
+}
+

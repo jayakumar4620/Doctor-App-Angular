@@ -1,0 +1,117 @@
+.owl-dt-timer{
+	display: none !important;
+}
+.mornclass{
+      margin-left: 40%;
+    margin-top: 10%;
+
+}
+.morndiv{
+        margin-left: 5%;
+    margin-top: 1%;
+    width: 6%;
+    float: left;
+
+}
+.morndiv2{
+ margin-top: 1%;
+    width: 75%;
+    float: left;
+
+}
+.noslotp{
+text-align: center;
+color: #4e87ee;
+}
+.morndiv2p{
+  padding-top: 15px !important;
+}
+.btncls{
+  float: right;
+    margin-right: 20px;
+    margin-bottom: 15px;
+
+}
+.timecoldiv{
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.morndiv3{
+    margin-top: 2%;
+    width: 10%;
+    float: right;
+    cursor: pointer;
+
+}
+.morndiv3img{
+  padding-right: 2%;
+    width: 16% !important;
+}
+.morndiv3p{
+ color: #4e87ee;
+}
+.column {
+  float: left;
+  width: 30%;
+ 
+}
+.timediv{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.timep{
+  border: 2px solid #4e87ee61;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 5px;
+    color: grey;
+
+
+}
+.maindivcls{
+margin-bottom: 1%;
+}
+
+.columntime{
+        
+    float: left;
+     margin-top: 2%;
+/*margin-top: 2%;*/
+    margin-left: 2%;
+    width: 12%;
+}
+.column2 {
+  float: left;
+  width:70%;
+  /*padding: 10px;*/
+  /*height: 300px;  Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.carddiv{
+	    margin-top: 6% !important;
+    margin-left: -5% !important;
+}
+.cardhgt{
+    margin-right: 75px;
+    margin-left: 75px;
+    height: 560px;
+    border-radius: 10px !important;
+
+}
+.caldiv{
+	 margin-top: 15% !important;
+    margin-left: 15% !important;
+}
+
+
+
+/* Modal Content */

@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+               "src/assets/css/izitoast/css/iziToast.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/css/izitoast/js/iziToast.min.js",
+
+            ]
           },
           "configurations": {
             "production": {

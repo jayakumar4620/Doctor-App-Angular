@@ -1,0 +1,255 @@
+<!-- <html lang="en"> -->
+<head>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/mdi@1.7.22/css/materialdesignicons.css">
+  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.5.2/tachyons.css">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+
+<body>
+<div >
+<div class="container">
+    <div class="row">
+       <!--  <h2>Navbar with Logo - Bootstrap 2.3.2</h2>
+        <p>Logo must be 150x50</p>
+        <p>If you want to use a biggest logo you must change the values to:</p>
+        <ul>
+            <li><code>.navbar-inner{ ... }</code> - Set min-height as Your image height value + 10px</li>            
+            <li><code>.navbar .nav > li > a {...}</code> - Check yourself</li>
+            <li><code>.navbar .btn-navbar{...}</code> - Check the margin top to center verticaly</li>
+        </ul> -->
+    </div>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <!-- <a class="brand logohead" href="#"> -->
+            <!-- UNCOMMENT THE CSS VALUES TO TEST OTHER DIMENTIONS -->
+            <!-- <img src="http://placehold.it/150x80&text=Logo" alt=""> -->
+            <!-- <img src="assets/images/images.png" alt=""> -->
+            <!-- </a> -->
+           <!--  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </a> -->
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="brand logohead"><a href="#" class="white">Doctor</a></li>
+
+                    <li class="drli">
+
+                    <img class="drimg" src="assets/images/doctor.jpg" alt="Avatar">
+                    <div>
+                    <p class="drname">Dr.Nishant Clinician</p>
+                    <p class="drname">Kids Care Clinic</p>
+                </div>
+                    <img class="drdrop" src="assets/images/sortdown.png"/>
+
+                </li>
+
+                  <li class="drli ">
+<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                <span class="datepicker-toggle drcal" >
+  <span class="datepicker-toggle-button" [style.background-image]="'url(assets/images/calendar.png)'"></span>
+  <input type="date"  (change)="onChange($event)"  class="datepicker-input" >
+</span>
+                    <div class="p35">
+   
+                    <p class="drname">Today</p>
+                    <p class="drname">{{show_date}}</p>
+                </div>
+                    <img class="drdrop " src="assets/images/sortdown.png"/>
+
+                </li>
+
+
+   <!--   <li class="flr">
+             <div class="wrap">
+  <button class="button">Walk-In</button>
+</div>
+
+</li> -->
+
+<li class="flr">
+<div class="wrap">
+  <button class="button" routerLink="slot">Appointments</button>
+</div>
+
+ </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class=" ptop">
+  <!-- <h1 class="f2 tc ttu blue" style="text-shadow: rgba( 0, 0, 0, 0.5 ) 2px 1px;">Tachyon List Cards with Expand View</h1> -->
+  <h3 class="ml">Home</h3>
+
+  <div class="card cardhgt">
+    <div class="countmain">
+        <div class="count">
+            <h4 class="counth3">{{count}}<p class="countp">Total</p></h4>
+
+        </div>
+    <!-- <div class="count">
+        </div> -->
+</div>
+  <main class="centercss maindiv">
+<div class="row">
+                            <div class="col-md-12">
+                                <div class="main-card mb-3 card">
+                                   
+                                    <div class="table-responsive">
+                                        <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                                            <thead>
+                                            <tr class="trheight">
+                                                <th class="text-center"></th>
+                                                <th class="text-center"></th>
+                                                <th class="text-center"></th>
+
+                                                <th>PATIENT</th>
+                                                <th class="text-center">CONTACT</th>
+                                                <th class="text-center">APPOINTMENT</th>
+                                                <th class="text-center">WAITED</th>
+                                                <!-- <th class="text-center"></th> -->
+                                                <th class="text-center"></th>
+
+
+                                            </tr>
+                                            </thead>
+
+
+
+                                            <tbody>
+                                                <!-- <div > -->
+                                            <tr *ngFor="let l of appointmentlist;let i =index;">
+                                                <td class="text-center text-muted">
+                                                    
+                <i class="f3 black-50 mdi mdi-dots-vertical"></i>
+                        <i class="f3 black-50 mdi mdi-dots-vertical"></i>
+
+                                                </td>
+                                                <td>  
+                <p class="snocss" [ngStyle]="{'color': l.sl_color,'background':l.sl_color_bg}">{{i+1}}</p>
+
+
+
+                                                 </td>
+
+                                                 <td class="w5"><img width="40" class="rounded-circle b50" src="assets/images/doctor.jpg" alt=""></td>
+                                                <td>
+                                                    <div class="widget-content p-0">
+                                                        <div class="widget-content-wrapper">
+                                                          
+                                                            <div class="widget-content-left flex2">
+                                                                <div class="widget-heading">{{l.name}}</div>
+                                                                <div class="widget-subheading opacity-7 subheadtitle">{{l.gender}}, {{l.age}}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">{{l.phone}}</td>
+                                                <td class="text-center">
+                                                  {{l.slot_from}}
+                                                </td>
+                                                <td class="text-center">
+                                                  
+                                                   <p class="waited">2.15 Hrs</p>
+                                                </td>
+      
+                                                <td> <i class="f3 black-50 mdi mdi-dots-horizontal"></i></td>
+
+                                            </tr>
+<!-- </div> -->
+
+<!-- <div > -->
+
+                                          <!-- <tr > -->
+<img  *ngIf="shownoimg" class="noimgcls"  src="assets/images/noappointment.png"/>
+<!-- <p  *ngIf="shownoimg" >No Appointments Found</p> -->
+
+
+                                            <!-- </tr> -->
+                                        <!-- </div> -->
+                                           <!--  <tr>
+                                                <td class="text-center text-muted">#347</td>
+                                                <td>
+                                                    <div class="widget-content p-0">
+                                                        <div class="widget-content-wrapper">
+                                                            <div class="widget-content-left mr-3">
+                                                                <div class="widget-content-left">
+                                                                    <img width="40" class="rounded-circle" src="assets/images/avatars/3.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="widget-content-left flex2">
+                                                                <div class="widget-heading">Ruben Tillman</div>
+                                                                <div class="widget-subheading opacity-7">Etiam sit amet orci eget</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Berlin</td>
+                                                <td class="text-center">
+                                                    <div class="badge badge-success">Completed</div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" id="PopoverCustomT-2" class="btn btn-primary btn-sm">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center text-muted">#321</td>
+                                                <td>
+                                                    <div class="widget-content p-0">
+                                                        <div class="widget-content-wrapper">
+                                                            <div class="widget-content-left mr-3">
+                                                                <div class="widget-content-left">
+                                                                    <img width="40" class="rounded-circle" src="assets/images/avatars/2.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="widget-content-left flex2">
+                                                                <div class="widget-heading">Elliot Huber</div>
+                                                                <div class="widget-subheading opacity-7">Lorem ipsum dolor sic</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">London</td>
+                                                <td class="text-center">
+                                                    <div class="badge badge-danger">In Progress</div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" id="PopoverCustomT-3" class="btn btn-primary btn-sm">Details</button>
+                                                </td>
+                                            </tr> -->
+                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                   
+
+
+
+
+
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+    
+  </main>
+</div>
+
+</section>
+</div>
+</body>
+<!-- </html> -->
+
+

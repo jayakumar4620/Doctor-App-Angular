@@ -1,0 +1,179 @@
+<!-- <html  > -->
+<head>
+<!-- <meta charset="utf-8"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div>
+	<div class="row">
+  <div class="column" >
+  	<div class="caldiv">
+   <owl-date-time-inline pickerType='calendar' [(ngModel)]="selectedMoment" (click)="getdate()"></owl-date-time-inline>
+</div>
+  </div>
+  <div class="column2" >
+     <div class="card cardhgt carddiv">
+   	
+
+
+
+<!-- morning div start -->
+<div class="maindivcls">
+  <div class="row">
+ <div class="morndiv" >
+  <img  calss="mornclass" src="assets/images/morn.png"/>
+
+ </div>
+<div class="morndiv2" >
+<p class="morndiv2p">
+    Morning
+  </p>
+  
+ </div>
+
+<div class="morndiv3"  (click)="open()">
+<p class="morndiv3p">
+   <img  calss="morndiv3img" style="width: 16%" src="assets/images/plus.png"/>
+    Add slot
+  </p>
+ 
+ </div>
+
+  </div>
+
+<div *ngFor ="let l of morslot">
+<div class="columntime">
+
+
+<p class="timep">{{l.slot_from}}</p>
+</div>
+
+
+
+
+</div>
+<p class="noslotp" *ngIf="morslotno_title">No Slot Created yet</p>
+
+</div>
+<!-- morning div end -->
+
+
+
+
+<!-- eve div start -->
+<div class="maindivcls">
+  <div class="row">
+ <div class="morndiv" >
+  <img  calss="mornclass" src="assets/images/eve.png"/>
+
+ </div>
+<div class="morndiv2" >
+<p  class="morndiv2p">
+    Evening
+  </p>
+
+ </div>
+
+<div class="morndiv3" >
+<p class="morndiv3p" (click)="open()">
+   <img  calss="morndiv3img" style="width: 16%" src="assets/images/plus.png"/>
+    Add slot
+  
+
+
+
+  </p>
+ </div>
+
+  </div>
+
+
+
+<div *ngFor="let l of eveslot">
+<div class="columntime">
+
+
+<p class="timep">{{l.slot_from}}</p>
+</div>
+
+
+</div>
+<p class="noslotp" *ngIf="eveslotno_title">No Slot Created yet</p>
+
+
+</div>
+
+<!-- eve div end -->
+
+
+
+
+  
+
+
+
+   </div>
+  </div>
+</div>
+</div>
+
+
+
+ <div id="id01" class="w3-modal">
+    <div class="w3-modal-content" style="margin-left: 445px;width: 40%;border-radius: 5px;">
+      <div class="w3-container">
+        <span (click)="close()" class="w3-button w3-display-topright">&times;</span>
+       
+           <form [formGroup]="addtime" >
+          
+        <div class="row">
+
+        <div class="timecoldiv">
+         <div class="form-group">
+          <label>Start Time</label>
+
+          <input  type="time" formControlName="start_time"  class="form-control datetimepicker" >
+           <div class="error-message message-small" *ngIf="!addtime.get('start_time').valid && addtime.get('start_time').touched">
+                      Please Select Start time
+                    </div>
+        </div>
+      </div>
+
+      <div class="timecoldiv">
+       <div class="form-group">
+        <label>End Time</label>
+        <input  type="time" formControlName="end_time" class="form-control datetimepicker" >
+         <div class="error-message message-small" *ngIf="!addtime.get('end_time').valid && addtime.get('end_time').touched">
+                      Please Select End time
+                    </div>
+      </div>
+    </div>
+</div>
+
+</form>
+
+
+<button  type="button" class="btn btn-success btncls" (click)="save()"  >Save</button>
+
+<button  type="button" class="btn btn-primary btncls" (click)="close()"  >Cancel</button>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</body>
+
+<!-- </html> -->
+<!-- <router-outlet></router-outlet> -->
