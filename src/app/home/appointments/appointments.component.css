@@ -150,7 +150,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-left: 75px;
     height: 560px;
     border-radius: 10px !important;
+        overflow-y: scroll;
 
+}
+.example::-webkit-scrollbar {
+    display: none;
 }
 .trheight{
   height: 50px !important;
